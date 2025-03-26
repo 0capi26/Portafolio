@@ -1,0 +1,193 @@
+    /* Estilos generales */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: wheat;
+        background: url('/hv/Fondo.png') no-repeat center center fixed; /* Usa tu imagen de fondo */
+        background-size: cover;
+    }
+
+    /* Efecto de desenfoque en el fondo */
+    .container {
+        position: relative;
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5); /* Oscurecido */
+        backdrop-filter: blur(5px); /* Difuminado */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        max-width: 900px;
+        margin: 20px auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Efecto al pasar el mouse */
+    .container:hover {
+        transform: scale(1.02);
+    }
+
+    /* Mejorando el navbar */
+    header {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: wheat;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: orange;
+    }
+
+
+
+    /* Habilidades */
+    .habilidades-lista {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .habilidad img {
+        width: 60px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .habilidad img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Proyectos */
+    .proyectos {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .proyecto {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px;
+        width: 30%;
+        min-width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, background 0.3s;
+    }
+
+    .proyecto:hover {
+        transform: translateY(-5px);
+        background: rgba(0, 58, 31, 0.671);
+    }
+
+
+    /*Imagenes proyectos*/
+
+    .proyecto img {
+        width: 100%; /* Que la imagen ocupe todo el ancho del contenedor */
+        height: auto;
+        border-radius: 10px; /* Bordes redondeados */
+        margin-bottom: 10px; /* Espaciado con el texto */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .proyecto img:hover {
+        transform: scale(1.9); /* Efecto de agrandar al pasar el mouse */
+    }
+
+
+
+    /* Botón de subir */
+    #btnArriba {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: purple;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    #btnArriba:hover {
+        background: rgba(0, 255, 213, 0.418);
+        transform: scale(1.1);
+    }
+
+
+    /* Estilo para hoja de vida */
+    .cv-button {
+        color: white; /* Texto blanco */
+        background: rgba(255, 255, 255, 0.2); /* Fondo blanco con transparencia */
+        padding: 8px 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        text-decoration: none; /* Quita el subrayado */
+        font-weight: bold;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    .cv-button:hover {
+        background: rgba(255, 255, 255, 0.4); /* Más visible al pasar el mouse */
+        color: black; /* Texto negro en hover */
+    }
+
+    /* Estilos para la navegación en móviles */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: wheat;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Estilos para la lista de navegación en móviles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        width: 200px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón hamburguesa */
+    }
+}
